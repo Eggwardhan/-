@@ -1,32 +1,51 @@
-# 文生图模型场景提示词清单（2025 版）
+<div align="center">
 
-> 目的：基础的色调，构图修改操作，**仅供参考！！！实际场景需灵活调整**。
-> 接触过文生图的可查看进阶的2)配色 3)镜头角度 4)构图
+# 🎨 文生图模型场景提示词清单（2025 版）
+
+**基于实践的完整提示词参考指南**
+
+</div>
+
 ---
+
+## 📋 使用说明
+
+> **🎯 目的**：基础的色调，构图修改操作，**仅供参考！！！实际场景需灵活调整**。  
+> **📚 进阶指南**：接触过文生图的可查看进阶的 2)配色、3)镜头角度、4)构图
+
+---
+## 🚀 快速开始
+
 <details>
+<summary><strong>📖 点击展开：通用文本生成图像模板</strong></summary>
 
-## 0) 通用文本生成图像模板
+### 0️⃣ 通用文本生成图像模板
 
-- **语言**：主提示用英文更稳，必要时附 HEX（如 `#F5F7FA`）。
-- **结构**（从重要到次要）：
-  1. **Subject**（产品是什么、角度）
-  2. **Color & Mood**（配色方案 + 情绪）
-  3. **Lighting**（光型/对比）
-  4. **Background & Material**（背景材质/肌理）
-  5. **Composition**（构图留白/焦段/景深）
-  6. **Render Style**（真实/写实/CG/影棚）
-  7. **Parameters**（纵横比、风格化等）
-- **配色落地技巧**：
-  - 用 `palette:` 或 `color palette:` 明示色板；再用 `dominant`, `secondary`, `accent` 指定 60–30–10。
-  - 如：`color palette: dominant #F5F7FA, secondary #DDE1E6, accent #111827`。
+#### 🌐 语言选择
+- **主提示用英文更稳**，必要时附 HEX（如 `#F5F7FA`）
+
+#### 🏗️ 结构框架（重要度递减）
+1. **Subject** - 产品是什么、角度
+2. **Color & Mood** - 配色方案 + 情绪
+3. **Lighting** - 光型/对比
+4. **Background & Material** - 背景材质/肌理
+5. **Composition** - 构图留白/焦段/景深
+6. **Render Style** - 真实/写实/CG/影棚
+7. **Parameters** - 纵横比、风格化等
+
+#### 🎨 配色落地技巧
+- 用 `palette:` 或 `color palette:` 明示色板
+- 用 `dominant`, `secondary`, `accent` 指定 **60–30–10** 比例
+- **示例**：`color palette: dominant #F5F7FA, secondary #DDE1E6, accent #111827`
 
 ---
 
-## 1) 通用 Prompt 模板
+### 1️⃣ 通用 Prompt 模板
 
-**通用英文模板**（例子，如需使用可以复制后替换 [变量]）：
+#### 📝 英文模板框架
+> 📋 **使用说明**：复制以下模板，替换 `[变量]` 部分即可使用
 
-```text
+```markdown
 [product type], hero shot on [angle/shot],
 color palette: dominant [#HEX / color name], secondary [#HEX / color name], accent [#HEX / color name],
 [mood adjectives], [style adjectives],
@@ -36,114 +55,216 @@ composition: [minimal/negative space/centered/Rule of Thirds], shallow depth of 
 render: [studio photography / realistic CG / product render], ultra-detailed, crisp edges
 ```
 
-
-
 </details>
 
 ---
 
-## 2) 配色 → 提示词块
+## 🎨 配色方案库
 
-> 每套均含：**关键词（中英）/ 背景材质 / 灯光 / 色板 / Prompt 片段 / Negative 要点**
+> 📦 **包含要素**：关键词（中英）/ 背景材质 / 灯光 / 色板 / Prompt 片段 / Negative 要点
 
-### 2.1 纯白高键（High‑key White, Clean E‑commerce）
+<div align="center">
 
-- **色板**：`#FFFFFF #F5F7FA #DDE1E6`
-- **关键词**：clean, high‑key, seamless paper, soft shadows, airy, clinical
-- **背景/材质**：white seamless sweep / soft gradient mist
-- **灯光**：large softbox top + fill，subtle rim，high key
-- **Prompt 片段**：
+**选择适合您项目的配色方案 👇**
 
+</div>
+
+### 2.1 ⚪ 纯白高键（High‑key White, Clean E‑commerce）
+
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#FFFFFF;border:1px solid #ddd">#FFFFFF</code> <code style="background:#F5F7FA;border:1px solid #ddd">#F5F7FA</code> <code style="background:#DDE1E6;border:1px solid #ddd">#DDE1E6</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>clean, high‑key, seamless paper, soft shadows, airy, clinical</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>white seamless sweep / soft gradient mist</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>large softbox top + fill，subtle rim，high key</td>
+</tr>
+</table>
+
+**📝 Prompt 片段**：
 ```text
 color palette: dominant #FFFFFF, secondary #F5F7FA, accent #DDE1E6;
 lighting: high-key, large softbox, soft shadows; background: white seamless paper, airy gradient
 ```
 
-- **Negative**：gray cast, strong texture, colored background
+**❌ Negative**：gray cast, strong texture, colored background
 
-### 2.2 高级灰单色（Premium Monochrome Grey, Minimal）
+### 2.2 🔘 高级灰单色（Premium Monochrome Grey, Minimal）
 
-- **色板**：`#111827 #6B7280 #E5E7EB`
-- **关键词**：monochrome, slate, minimal, sculptural, tonal contrast
-- **背景/材质**：matte concrete / plaster / fog gradient
-- **灯光**：directional key + soft fill，medium contrast
-- **Prompt 片段**：
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#111827;color:white;border:1px solid #ddd">#111827</code> <code style="background:#6B7280;color:white;border:1px solid #ddd">#6B7280</code> <code style="background:#E5E7EB;border:1px solid #ddd">#E5E7EB</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>monochrome, slate, minimal, sculptural, tonal contrast</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>matte concrete / plaster / fog gradient</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>directional key + soft fill，medium contrast</td>
+</tr>
+</table>
 
+**📝 Prompt 片段**：
 ```text
 color palette: dominant #111827, secondary #6B7280, accent #E5E7EB; background: matte concrete; lighting: directional key, soft fill; mood: minimal, sculptural
 ```
 
-- **Negative**：colorful accents, warm color cast
+**❌ Negative**：colorful accents, warm color cast
 
-### 2.3 暖中性家居（Warm Neutrals, Lifestyle）
+### 2.3 🤎 暖中性家居（Warm Neutrals, Lifestyle）
 
-- **色板**：`#EDE7DD #CBB7A1 #8B6B52`
-- **关键词**：cozy, warm neutral, homey, wood grain, linen
-- **背景/材质**：oak wood / linen fabric / plaster wall
-- **灯光**：soft window light，warm bounce（\~3200–4000K）
-- **Prompt 片段**：
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#EDE7DD;border:1px solid #ddd">#EDE7DD</code> <code style="background:#CBB7A1;border:1px solid #ddd">#CBB7A1</code> <code style="background:#8B6B52;color:white;border:1px solid #ddd">#8B6B52</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>cozy, warm neutral, homey, wood grain, linen</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>oak wood / linen fabric / plaster wall</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>soft window light，warm bounce（~3200–4000K）</td>
+</tr>
+</table>
 
+**📝 Prompt 片段**：
 ```text
 color palette: dominant #EDE7DD, secondary #CBB7A1, accent #8B6B52; background: oak wood and linen; lighting: soft window light, warm bounce; mood: cozy lifestyle
 ```
 
-- **Negative**：overly saturated colors, glossy plastic feel
+**❌ Negative**：overly saturated colors, glossy plastic feel
 
-### 2.4 冷中性科技（Cool Tech, Rational）
+### 2.4 💙 冷中性科技（Cool Tech, Rational）
 
-- **色板**：`#0F172A #334155 #93C5FD`
-- **关键词**：cool, tech, rational, slate blue, glass, steel
-- **背景/材质**：brushed metal / dark glass / grid light
-- **灯光**：cool rim + top‑down spot，specular highlights
-- **Prompt 片段**：
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#0F172A;color:white;border:1px solid #ddd">#0F172A</code> <code style="background:#334155;color:white;border:1px solid #ddd">#334155</code> <code style="background:#93C5FD;border:1px solid #ddd">#93C5FD</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>cool, tech, rational, slate blue, glass, steel</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>brushed metal / dark glass / grid light</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>cool rim + top‑down spot，specular highlights</td>
+</tr>
+</table>
 
+**📝 Prompt 片段**：
 ```text
 color palette: dominant #0F172A, secondary #334155, accent #93C5FD; materials: brushed metal, dark glass; lighting: cool rim light, top-down spot; mood: tech, precise
 ```
 
-- **Negative**：warm yellow cast, wood textures
+**❌ Negative**：warm yellow cast, wood textures
 
-### 2.5 柔雾奶油（Soft Mist & Cream, Beauty）
+### 2.5 🌸 柔雾奶油（Soft Mist & Cream, Beauty）
 
-- **色板**：`#F7E6E8 #F3D5CE #D7B7A3`
-- **关键词**：soft, creamy, blush, hazy, powdery, gentle
-- **背景/材质**：pastel gradient fog / satin cloth / cloud dust
-- **灯光**：large diffused key，low contrast bloom
-- **Prompt 片段**：
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#F7E6E8;border:1px solid #ddd">#F7E6E8</code> <code style="background:#F3D5CE;border:1px solid #ddd">#F3D5CE</code> <code style="background:#D7B7A3;border:1px solid #ddd">#D7B7A3</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>soft, creamy, blush, hazy, powdery, gentle</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>pastel gradient fog / satin cloth / cloud dust</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>large diffused key，low contrast bloom</td>
+</tr>
+</table>
 
+**📝 Prompt 片段**：
 ```text
 color palette: dominant #F7E6E8, secondary #F3D5CE, accent #D7B7A3; background: pastel gradient fog, satin; lighting: diffused, soft bloom; mood: delicate, beauty
 ```
 
-- **Negative**：hard shadows, sharp textures
+**❌ Negative**：hard shadows, sharp textures
 
-### 2.6 大地自然（Earthy Nature, Outdoor/Organic）
+### 2.6 🌿 大地自然（Earthy Nature, Organic）
 
-- **色板**：`#5B7553 #A3B18A #DAD7CD #6C584C`
-- **关键词**：earthy, organic, foliage, stone, moss
-- **背景/材质**：moss stone / clay / foliage bokeh
-- **灯光**：soft daylight + ambient occlusion，subtle haze
-- **Prompt 片段**：
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#5B7553;color:white;border:1px solid #ddd">#5B7553</code> <code style="background:#A3B18A;border:1px solid #ddd">#A3B18A</code> <code style="background:#DAD7CD;border:1px solid #ddd">#DAD7CD</code> <code style="background:#6C584C;color:white;border:1px solid #ddd">#6C584C</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>earthy, organic, foliage, stone, moss</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>moss stone / clay / foliage bokeh</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>soft daylight + ambient occlusion，subtle haze</td>
+</tr>
+</table>
 
+**📝 Prompt 片段**：
 ```text
 color palette: #5B7553 #A3B18A #DAD7CD #6C584C; materials: stone, clay, moss; lighting: soft daylight, subtle haze; mood: organic, grounded
 ```
 
-- **Negative**：neon accents, chrome reflections
+**❌ Negative**：neon accents, chrome reflections
 
-### 2.7 海滩阳光（Sunny Beach, Refreshing FMCG）
+### 2.7 🌊 海滩阳光（Sunny Beach, Refreshing）
 
-- **色板**：`#00A3C4 #FFE08C #FF6B35`
-- **关键词**：sunny, tropical, splash, summer, fresh
-- **背景/材质**：turquoise water / sand / splash particles
-- **灯光**：backlit sunshine + sparkle highlights，high contrast
-- **Prompt 片段**：
+<table>
+<tr>
+<td><strong>🎨 色板</strong></td>
+<td><code style="background:#00A3C4;color:white;border:1px solid #ddd">#00A3C4</code> <code style="background:#FFE08C;border:1px solid #ddd">#FFE08C</code> <code style="background:#FF6B35;color:white;border:1px solid #ddd">#FF6B35</code></td>
+</tr>
+<tr>
+<td><strong>🏷️ 关键词</strong></td>
+<td>sunny, tropical, splash, summer, fresh</td>
+</tr>
+<tr>
+<td><strong>🖼️ 背景/材质</strong></td>
+<td>turquoise water / sand / splash particles</td>
+</tr>
+<tr>
+<td><strong>💡 灯光</strong></td>
+<td>backlit sunshine + sparkle highlights，high contrast</td>
+</tr>
+</table>
 
+**📝 Prompt 片段**：
 ```text
 color palette: dominant #00A3C4, secondary #FFE08C, accent #FF6B35; background: turquoise water and sand; lighting: bright backlit sunshine, sparkle highlights; mood: energetic, refreshing
 ```
 
-- **Negative**：overcast, dull tones, muddy water
+**❌ Negative**：overcast, dull tones, muddy water
 
 ### 2.8 复古蓝橘（Retro Blue–Orange, Nostalgic）
 
@@ -217,80 +338,102 @@ color palette: #0B0B0C #1F1F1F #D4AF37 #8C7853; background: black velvet with su
 
 ---
 
-## 3) 镜头角度
+## 📷 镜头角度指南
 
-### 核心常用角度（主图/详情页最常见）
-	•	正面视图 (Front view)：直观展示产品的主体外观，常用于主图。
-	•	侧面图 (Side view) / 后视图 (Back view)：帮助展示产品不同角度的细节，适合服装、鞋子、包类等。
-	•	全景图 (Panorama / Wide view)：用于大型商品（家具、家电），强调整体感。
-	•	特写 (Close up / Extreme closeup)：突出细节、材质、质感，如珠宝、手表、布料。
-	•	胸部以上 (Waist shot) / 全身 (Full body)：适合服饰、模特穿搭，展示比例。
+<div align="center">
 
-⸻
+**专业摄影角度选择参考**
 
-### 细节与氛围增强角度
-	•	微距拍摄 (Macro shot)：展示小件商品（首饰、化妆品、电子元件）的细节。
-	•	虚化 (Bokeh)：背景模糊，突出产品主体，适合美妆、奢侈品。
-	•	高角度视图 (High angle view)：俯拍，适合桌面小物件、餐饮产品，营造干净构图。
-	•	低角度视图 (Low angle view / Look up)：让产品显得更有气势，常用于鞋子、汽车、运动用品。
+</div>
 
-⸻
+### 🎯 核心常用角度（主图/详情页最常见）
 
-### 营销场景常见特殊角度
-	•	航拍视角 (Aerial view / Bird view / Top view)：常用于餐饮、美妆套装、桌面布置，带来整体协调感。
-	•	等距视图 (Isometric view)：适合3C数码类产品，能均衡展示结构与细节。
-	•	长焦镜头 (Telephoto lens)：压缩空间感，适合展示产品和背景氛围。
-	•	超广角拍摄 (Ultrawide shot)：突出空间感，适合家具、室内装饰场景。
+| 角度类型 | 英文术语 | 适用场景 | 特点描述 |
+|---------|---------|----------|----------|
+| 正面视图 | Front view | 主图展示 | 直观展示产品主体外观 |
+| 侧面图 | Side view | 服装、鞋子、包类 | 展示产品不同角度细节 |
+| 后视图 | Back view | 服装、包类 | 完整展示产品信息 |
+| 全景图 | Panorama / Wide view | 家具、家电 | 强调整体感和尺寸 |
+| 特写 | Close up / Extreme closeup | 珠宝、手表、布料 | 突出细节、材质、质感 |
+| 胸部以上 | Waist shot | 服饰展示 | 展示穿搭效果和比例 |
+| 全身 | Full body | 模特穿搭 | 完整展示造型效果 |
 
-### 常用提示词
-| Prompt 中文提示词 | Prompt 英文提示词         |
-|------------------|--------------------------|
-| 航拍视角         | Aerial view              |
-| DSLR拍摄         | Shot by DSLR             |
-| 360全景图        | 360 Panorama             |
-| 全景图           | Panorama                 |
-| 长焦镜头         | Telephoto Lens           |
-| 微距拍摄         | Macro shot               |
-| 显微镜           | Microscopy               |
-| 放大倍数         | Magnification            |
-| 特写             | Close up                 |
-| 全身             | Full body                |
-| 肖像             | Portrait                 |
-| 侧身像           | Profile                  |
-| 针孔镜头         | Pinhole Lens             |
-| 广视角           | Wide view                |
-| 望远镜镜头       | Telescope Lens           |
-| 卫星图像         | Satellite lmagery        |
-| 头部特写         | Headshot                 |
-| 极端特写         | Extreme closeup          |
-| 超广角拍摄       | Ultrawide shot           |
-| 鸟瞰图           | Bird view                |
-| 顶视图           | Top view                 |
-| 前视图           | Front view               |
-| 侧面图           | Side view                |
-| 后视图           | Back view                |
-| 脸部特写         | Face shot                |
-| 胸部以上         | Waist shot               |
-| 长距拍摄         | Extra long shot          |
-| 仰视             | look up                  |
-| 等距视图         | isometric view           |
-| 高角度视图       | High angle view          |
-| 低角度视图       | Low angle view           |
-| 虚化             | Bokeh                    |
+### ⚡ 细节与氛围增强角度
+
+| 角度类型 | 英文术语 | 适用场景 | 效果描述 |
+|---------|---------|----------|----------|
+| 微距拍摄 | Macro shot | 首饰、化妆品、电子元件 | 展示精细细节 |
+| 虚化 | Bokeh | 美妆、奢侈品 | 背景模糊，突出主体 |
+| 高角度视图 | High angle view | 桌面小物件、餐饮 | 营造干净构图 |
+| 低角度视图 | Low angle view / Look up | 鞋子、汽车、运动用品 | 增强气势感 |
+
+### 🚀 营销场景特殊角度
+
+| 角度类型 | 英文术语 | 适用场景 | 营销效果 |
+|---------|---------|----------|----------|
+| 航拍视角 | Aerial view / Bird view / Top view | 餐饮、美妆套装、桌面布置 | 整体协调感 |
+| 等距视图 | Isometric view | 3C数码产品 | 均衡展示结构与细节 |
+| 长焦镜头 | Telephoto lens | 产品氛围展示 | 压缩空间感 |
+| 超广角拍摄 | Ultrawide shot | 家具、室内装饰 | 突出空间感 |
+
+### 📝 常用提示词速查表
+
+| 🇨🇳 中文提示词 | 🇺🇸 英文提示词 | 📝 适用场景 |
+|------------------|--------------------------|-------------|
+| 航拍视角 | Aerial view | 俯瞰全景，大场面 |
+| DSLR拍摄 | Shot by DSLR | 专业品质，主图 |
+| 360全景图 | 360 Panorama | 产品展示，VR |
+| 全景图 | Panorama | 宽幅场景 |
+| 长焦镜头 | Telephoto Lens | 压缩空间，突出主体 |
+| 微距拍摄 | Macro shot | 细节展示 |
+| 显微镜 | Microscopy | 超微细节 |
+| 放大倍数 | Magnification | 放大展示 |
+| 特写 | Close up | 重点突出 |
+| 全身 | Full body | 完整展示 |
+| 肖像 | Portrait | 人像拍摄 |
+| 侧身像 | Profile | 侧面轮廓 |
+| 针孔镜头 | Pinhole Lens | 艺术效果 |
+| 广视角 | Wide view | 场景感强 |
+| 望远镜镜头 | Telescope Lens | 远距离拍摄 |
+| 卫星图像 | Satellite lmagery | 超高视角 |
+| 头部特写 | Headshot | 头部聚焦 |
+| 极端特写 | Extreme closeup | 超近距离 |
+| 超广角拍摄 | Ultrawide shot | 空间感强 |
+| 鸟瞰图 | Bird view | 高处俯视 |
+| 顶视图 | Top view | 正上方视角 |
+| 前视图 | Front view | 正面展示 |
+| 侧面图 | Side view | 侧面细节 |
+| 后视图 | Back view | 背面展示 |
+| 脸部特写 | Face shot | 面部聚焦 |
+| 胸部以上 | Waist shot | 上半身 |
+| 长距拍摄 | Extra long shot | 远景拍摄 |
+| 仰视 | look up | 仰角拍摄 |
+| 等距视图 | isometric view | 立体展示 |
+| 高角度视图 | High angle view | 俯拍视角 |
+| 低角度视图 | Low angle view | 仰拍视角 |
+| 虚化 | Bokeh | 背景模糊 |
 
 ---
 
-## 4) 构图
-### 常见构图
-> Tips: 请注意，本prompt仅作为构图参考，如需要*保持一致性*需要添加额外提示词！！！
+## 🖼️ 构图方案库
 
-| 场景用途 | 场景描述与布置 | 推荐角度/镜头 | Prompt 示例（中 / EN） |
-|---|---|---|---|
-|图中图|图像中需要插入一个块展示产品细节|根据具体情况决定|中：插入圆形细节框，展示[商品部分区域]，放大细节标注，带引导线和极细轮廓线  En: inset circular detail to show the [商品部分区域] , magnified detail callout, leader line, hairline outline|
-|产品图|图像需要标注尺寸+白底图，标题|前视图 Front view + 长焦镜头 Telephoto|中：纯白#FFFFFF背景产品图，正面视图，长宽高尺寸标注，清晰无干扰EN: change the background to #FFFFFF pure white, front view, telephoto lens, clear width/height/depth dimension annotations|
-| 主图（白底Packshot） | 纯白背景、主体居中、无阴影干扰，适合电商首页主图 | 前视图 Front view + DSLR拍摄 Shot by DSLR | 中：纯白背景主图，正面视图，DSLR拍摄，产品占画面85%，高质感<br>EN: Main product on pure white background, front view, shot by DSLR, product fills 85% of frame, high fidelity |
-| 45°三分之四视角（立体展示） | 轻微俯拍，更显体积与层次 | 高角度视图 High angle view + 等距视图 isometric view | 中：等距视图45°高角度，灰渐变背景，柔光<br>EN: Isometric 45° high angle view, gray gradient backdrop, soft lighting |
-| 三视图（正/侧/背） | 同一光位呈现正面、侧面、背面，信息完整 | 前视图/侧面图/后视图 Front/Side/Back view | 中：统一灯光的正侧背三视图排版，灰白背景<br>EN: Consistent lighting front/side/back views in a clean layout, light gray background |
+<div align="center">
+
+**专业构图与场景应用指南**
+
+</div>
+
+### 📐 构图方案总览
+
+> ⚠️ **重要提示**：本prompt仅作为构图参考，如需要**保持一致性**需要添加额外提示词！
+
+| 🎯 场景用途 | 📝 场景描述与布置 | 📷 推荐角度/镜头 | 💬 Prompt 示例 |
+|-------------|------------------|------------------|----------------|
+| **图中图** | 图像中需要插入一个块展示产品细节 | 根据具体情况决定 | **🇨🇳** 插入圆形细节框，展示[商品部分区域]，放大细节标注，带引导线和极细轮廓线<br>**🇺🇸** inset circular detail to show the [商品部分区域], magnified detail callout, leader line, hairline outline |
+| **产品图** | 图像需要标注尺寸+白底图，标题 | 前视图 Front view + 长焦镜头 Telephoto | **🇨🇳** 纯白#FFFFFF背景产品图，正面视图，长宽高尺寸标注，清晰无干扰<br>**🇺🇸** change the background to #FFFFFF pure white, front view, telephoto lens, clear width/height/depth dimension annotations |
+| **主图（白底Packshot）** | 纯白背景、主体居中、无阴影干扰，适合电商首页主图 | 前视图 Front view + DSLR拍摄 Shot by DSLR | **🇨🇳** 纯白背景主图，正面视图，DSLR拍摄，产品占画面85%，高质感<br>**🇺🇸** Main product on pure white background, front view, shot by DSLR, product fills 85% of frame, high fidelity |
+| **45°三分之四视角（立体展示）** | 轻微俯拍，更显体积与层次 | 高角度视图 High angle view + 等距视图 isometric view | **🇨🇳** 等距视图45°高角度，灰渐变背景，柔光<br>**🇺🇸** Isometric 45° high angle view, gray gradient backdrop, soft lighting |
+| **三视图（正/侧/背）** | 同一光位呈现正面、侧面、背面，信息完整 | 前视图/侧面图/后视图 Front/Side/Back view | **🇨🇳** 统一灯光的正侧背三视图排版，灰白背景<br>**🇺🇸** Consistent lighting front/side/back views in a clean layout, light gray background |
 | 细节材质（质感卖点） | 纹理、缝线、按键、接口等 | 微距拍摄 Macro shot + 极端特写 Extreme closeup + 放大倍数 Magnification | 中：材质微距特写，极端特写，1.5×放大，景深浅，虚化<br>EN: Macro detail, extreme close-up, 1.5× magnification, shallow depth of field, bokeh |
 | 功能信息/接口说明 | 标出功能区、按钮、端口 | 顶视图 Top view 或 等距视图 isometric view + 长焦镜头 Telephoto Lens（压缩透视） | 中：等距视图功能标注图，长焦镜头压缩透视，清晰指示线与标签<br>EN: Isometric feature callout, telephoto compression, clean leader lines and labels |
 | 开箱&全配件（In the box） | 产品+配件一字排开，便于理解清单 | 顶视图 Top view + 全景图 Panorama（横幅排版） | 中：顶视图开箱平铺，全配件整齐排列，柔和阴影。画面中只包含下列配件：[商品区域]所有物品整齐对齐排布，灰色背景，无其他任何物品。<br>EN: Top-view unboxing flat lay, all accessories neatly aligned, soft shadows. The image must include only the following items: [商品区域]All items neatly aligned on a gray background, no additional objects.|
@@ -321,8 +464,30 @@ color palette: #0B0B0C #1F1F1F #D4AF37 #8C7853; background: black velvet with su
 
 ---
 
-## 5) 小贴士
+## 💡 实用小贴士
 
-- **强调主色对比**：写入 `high contrast between subject and background`；若产品色接近背景，改用 `complementary background hue`。
-- **电商规范**：如平台要求白底，依 2.1 模板仅保留 `#FFFFFF` 系列
+### 🎨 色彩处理技巧
+- **强调主色对比**：写入 `high contrast between subject and background`
+- **颜色冲突处理**：若产品色接近背景，改用 `complementary background hue`
+- **电商规范**：平台要求白底时，依 2.1 模板仅保留 `#FFFFFF` 系列
+
+### 📸 拍摄质量提升
+- **主图优化**：使用 DSLR 关键词提升专业感
+- **细节展示**：善用微距和特写突出产品特色
+- **氛围营造**：通过灯光和背景材质创造情绪
+
+### ⚡ 效率优化建议
+- **模板复用**：建立个人常用模板库
+- **批量处理**：相似产品可复用相同参数
+- **A/B测试**：对比不同参数效果选择最优方案
+
+---
+
+<div align="center">
+
+**🎉 感谢使用本指南！祝您创作愉快！**
+
+*如有问题或建议，欢迎反馈交流*
+
+</div>
 
