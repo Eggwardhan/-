@@ -367,7 +367,7 @@ color palette: #0B0B0C #1F1F1F #D4AF37 #8C7853; background: black velvet with su
 | 高角度视图 | High angle view | 桌面小物件、餐饮 | 营造干净构图 |
 | 低角度视图 | Low angle view / Look up | 鞋子、汽车、运动用品 | 增强气势感 |
 
-### 🚀 营销场景特殊角度
+### 🚀 特殊场景角度
 
 | 角度类型 | 英文术语 | 适用场景 | 营销效果 |
 |---------|---------|----------|----------|
@@ -425,41 +425,226 @@ color palette: #0B0B0C #1F1F1F #D4AF37 #8C7853; background: black velvet with su
 
 ### 📐 构图方案总览
 
-> ⚠️ **重要提示**：本prompt仅作为构图参考，如需要**保持一致性**需要添加额外提示词！
+<div align="center">
 
-| 🎯 场景用途 | 📝 场景描述与布置 | 📷 推荐角度/镜头 | 💬 Prompt 示例 |
-|-------------|------------------|------------------|----------------|
-| **图中图** | 图像中需要插入一个块展示产品细节 | 根据具体情况决定 | **🇨🇳** 插入圆形细节框，展示[商品部分区域]，放大细节标注，带引导线和极细轮廓线<br>**🇺🇸** inset circular detail to show the [商品部分区域], magnified detail callout, leader line, hairline outline |
-| **产品图** | 图像需要标注尺寸+白底图，标题 | 前视图 Front view + 长焦镜头 Telephoto | **🇨🇳** 纯白#FFFFFF背景产品图，正面视图，长宽高尺寸标注，清晰无干扰<br>**🇺🇸** change the background to #FFFFFF pure white, front view, telephoto lens, clear width/height/depth dimension annotations |
-| **主图（白底Packshot）** | 纯白背景、主体居中、无阴影干扰，适合电商首页主图 | 前视图 Front view + DSLR拍摄 Shot by DSLR | **🇨🇳** 纯白背景主图，正面视图，DSLR拍摄，产品占画面85%，高质感<br>**🇺🇸** Main product on pure white background, front view, shot by DSLR, product fills 85% of frame, high fidelity |
-| **45°三分之四视角（立体展示）** | 轻微俯拍，更显体积与层次 | 高角度视图 High angle view + 等距视图 isometric view | **🇨🇳** 等距视图45°高角度，灰渐变背景，柔光<br>**🇺🇸** Isometric 45° high angle view, gray gradient backdrop, soft lighting |
-| **三视图（正/侧/背）** | 同一光位呈现正面、侧面、背面，信息完整 | 前视图/侧面图/后视图 Front/Side/Back view | **🇨🇳** 统一灯光的正侧背三视图排版，灰白背景<br>**🇺🇸** Consistent lighting front/side/back views in a clean layout, light gray background |
-| 细节材质（质感卖点） | 纹理、缝线、按键、接口等 | 微距拍摄 Macro shot + 极端特写 Extreme closeup + 放大倍数 Magnification | 中：材质微距特写，极端特写，1.5×放大，景深浅，虚化<br>EN: Macro detail, extreme close-up, 1.5× magnification, shallow depth of field, bokeh |
-| 功能信息/接口说明 | 标出功能区、按钮、端口 | 顶视图 Top view 或 等距视图 isometric view + 长焦镜头 Telephoto Lens（压缩透视） | 中：等距视图功能标注图，长焦镜头压缩透视，清晰指示线与标签<br>EN: Isometric feature callout, telephoto compression, clean leader lines and labels |
-| 开箱&全配件（In the box） | 产品+配件一字排开，便于理解清单 | 顶视图 Top view + 全景图 Panorama（横幅排版） | 中：顶视图开箱平铺，全配件整齐排列，柔和阴影。画面中只包含下列配件：[商品区域]所有物品整齐对齐排布，灰色背景，无其他任何物品。<br>EN: Top-view unboxing flat lay, all accessories neatly aligned, soft shadows. The image must include only the following items: [商品区域]All items neatly aligned on a gray background, no additional objects.|
-| 尺寸比例（上手/情景比例） | 手持、桌面、背包旁等做参照 | 侧面图 Side view 或 低角度视图 Low angle view + 虚化 Bokeh（突出主体） | 中：真实场景上手图，低角度视图，背景虚化突出主体<br>EN: In-hand lifestyle, low angle view, background bokeh to emphasize product |
-| 生活方式（卖点落地） | 在真实使用环境，强调人群与场景 | 广视角 Wide view / 超广角 Ultrawide shot（谨慎避免变形） + 高/低角度 High/Low angle | 中：厨房台面生活方式场景，广视角，高角度视图，自然光<br>EN: Lifestyle in kitchen countertop, wide view, high angle, natural light |
-| 360°旋转/多角合集 | 多角度一屏呈现或旋转序列 | 360全景图 360 Panorama + 顶视/前视 Top/Front view | 中：360°多角度合集，白底，统一光位与间隔<br>EN: 360° angle collage on white background, consistent lighting and spacing |
-| 对比/前后变化（清洁类/美妆） | 功效展示或旧款对比 | 前视图 Front view + 长焦镜头 Telephoto（减少变形） | 中：前后对比图，正面同角度同光位，长焦镜头，标注差异<br>EN: Before/after comparison, identical front view and lighting, telephoto lens, clear annotations |
+**🎯 专业构图场景应用指南**
+
+*⚠️ 重要提示：本prompt仅作为构图参考，如需保持一致性请添加额外提示词！*
+
+</div>
+
+---
+
+#### 🏷️ **电商核心场景**
+
+<table>
+<tr>
+<th width="15%">🎯 场景用途</th>
+<th width="20%">📝 场景描述与布置</th>
+<th width="15%">📷 推荐角度/镜头</th>
+<th width="50%">💬 Prompt 示例</th>
+</tr>
+<tr>
+<td><strong>🔍 图中图</strong></td>
+<td>图像中插入细节展示块</td>
+<td>根据具体情况决定</td>
+<td><strong>🇨🇳</strong> 插入圆形细节框，展示[商品部分区域]，放大细节标注，带引导线和极细轮廓线<br><strong>🇺🇸</strong> inset circular detail to show the [商品部分区域], magnified detail callout, leader line, hairline outline</td>
+</tr>
+<tr>
+<td><strong>📏 产品图</strong></td>
+<td>标注尺寸+白底图，标题</td>
+<td>前视图 + 长焦镜头</td>
+<td><strong>🇨🇳</strong> 纯白#FFFFFF背景产品图，正面视图，长宽高尺寸标注，清晰无干扰<br><strong>🇺🇸</strong> change the background to #FFFFFF pure white, front view, telephoto lens, clear width/height/depth dimension annotations</td>
+</tr>
+<tr>
+<td><strong>🖼️ 主图（白底Packshot）</strong></td>
+<td>纯白背景、主体居中、无阴影干扰</td>
+<td>前视图 + DSLR拍摄</td>
+<td><strong>🇨🇳</strong> 纯白背景主图，正面视图，DSLR拍摄，产品占画面85%，高质感<br><strong>🇺🇸</strong> Main product on #FFFFFF	background, front view, shot by DSLR, product fills 85% of frame, high fidelity</td>
+</tr>
+<tr>
+<td><strong>📐 45°三分之四视角</strong></td>
+<td>轻微俯拍，更显体积与层次</td>
+<td>高角度视图 + 等距视图</td>
+<td><strong>🇨🇳</strong> 等距视图45°高角度，灰渐变背景，柔光<br><strong>🇺🇸</strong> Isometric 45° high angle view, gray gradient backdrop, soft lighting</td>
+</tr>
+<tr>
+<td><strong>🔄 三视图（正/侧/背）</strong></td>
+<td>同一光位呈现正面、侧面、背面</td>
+<td>前视图/侧面图/后视图</td>
+<td><strong>🇨🇳</strong> 统一灯光的正侧背三视图排版，灰白背景<br><strong>🇺🇸</strong> Consistent lighting front/side/back views in a clean layout, light gray background</td>
+</tr>
+</table>
+
+---
+
+#### 🔍 **细节展示场景**
+
+<table>
+<tr>
+<th width="15%">🎯 场景用途</th>
+<th width="20%">📝 场景描述与布置</th>
+<th width="15%">📷 推荐角度/镜头</th>
+<th width="50%">💬 Prompt 示例</th>
+</tr>
+<tr>
+<td><strong>🔬 细节材质</strong></td>
+<td>纹理、缝线、按键、接口等</td>
+<td>微距拍摄 + 极端特写 + 放大倍数</td>
+<td><strong>🇨🇳</strong> 材质微距特写，极端特写，1.5×放大，景深浅，虚化<br><strong>🇺🇸</strong> Macro detail, extreme close-up, 1.5× magnification, shallow depth of field, bokeh</td>
+</tr>
+<tr>
+<td><strong>⚙️ 功能信息/接口说明</strong></td>
+<td>标出功能区、按钮、端口</td>
+<td>顶视图 或 等距视图 + 长焦镜头</td>
+<td><strong>🇨🇳</strong> 等距视图功能标注图，长焦镜头压缩透视，清晰指示线与标签<br><strong>🇺🇸</strong> Isometric feature callout, telephoto compression, clean leader lines and labels</td>
+</tr>
+<tr>
+<td><strong>📦 开箱&全配件</strong></td>
+<td>产品+配件一字排开，便于理解清单</td>
+<td>顶视图 + 全景图（横幅排版）</td>
+<td><strong>🇨🇳</strong> 顶视图开箱平铺，全配件整齐排列，柔和阴影。画面中只包含下列配件：[商品区域]所有物品整齐对齐排布，灰色背景，无其他任何物品。<br><strong>🇺🇸</strong> Top-view unboxing flat lay, all accessories neatly aligned, soft shadows. The image must include only the following items: [商品区域]All items neatly aligned on a gray background, no additional objects.</td>
+</tr>
+</table>
+
+---
+
+#### 🌟 **营销展示场景**
+
+<table>
+<tr>
+<th width="15%">🎯 场景用途</th>
+<th width="20%">📝 场景描述与布置</th>
+<th width="15%">📷 推荐角度/镜头</th>
+<th width="50%">💬 Prompt 示例</th>
+</tr>
+<tr>
+<td><strong>📏 尺寸比例</strong></td>
+<td>手持、桌面、背包旁等做参照</td>
+<td>侧面图 或 低角度视图 + 虚化</td>
+<td><strong>🇨🇳</strong> 真实场景上手图，低角度视图，背景虚化突出主体<br><strong>🇺🇸</strong> In-hand lifestyle, low angle view, background bokeh to emphasize product</td>
+</tr>
+<tr>
+<td><strong>🏠 生活方式</strong></td>
+<td>在真实使用环境，强调人群与场景</td>
+<td>广视角 / 超广角 + 高/低角度</td>
+<td><strong>🇨🇳</strong> 厨房台面生活方式场景，广视角，高角度视图，自然光<br><strong>🇺🇸</strong> Lifestyle in kitchen countertop, wide view, high angle, natural light</td>
+</tr>
+<tr>
+<td><strong>🔄 360°旋转/多角合集</strong></td>
+<td>多角度一屏呈现或旋转序列</td>
+<td>360全景图 + 顶视/前视</td>
+<td><strong>🇨🇳</strong> 360°多角度合集，白底，统一光位与间隔<br><strong>🇺🇸</strong> 360° angle collage on white background, consistent lighting and spacing</td>
+</tr>
+<tr>
+<td><strong>⚖️ 对比/前后变化</strong></td>
+<td>功效展示或旧款对比</td>
+<td>前视图 + 长焦镜头（减少变形）</td>
+<td><strong>🇨🇳</strong> 前后对比图，正面同角度同光位，长焦镜头，标注差异<br><strong>🇺🇸</strong> Before/after comparison, identical front view and lighting, telephoto lens, clear annotations</td>
+</tr>
+</table>
 
 
-⸻
+---
 
-服饰&穿戴类补充（模特与角度）
-	•	全身 Full body / 半身 Waist shot / 肖像 Portrait / 侧身像 Profile / 后视图 Back view / 头部特写 Headshot
-	•	建议：主图用正面全身或半身；详页补充侧/背/细节（领口、面料、走线）；户外生活方式图用低角度 Low angle略显比例更好，背景Bokeh突出服装层次。
+#### 👗 **服饰穿戴类补充**
 
-示例Prompt（服饰）
-	•	中：女款风衣，城市街景生活方式，低角度视图，半身，Bokeh，DSLR拍摄
-	•	EN: Women's trench coat, urban lifestyle scene, low angle view, waist shot, bokeh, shot by DSLR
+<div align="center">
 
-⸻
+**🎭 模特与角度专业指南**
 
-快速布光与镜头小贴士
-	•	主图/三视图：双侧柔光 + 顶补光，长焦或标准焦（避免超广角变形）。
-	•	微距细节：小光圈（加景深）或焦点堆栈，避免镜面高光炸点。
-	•	生活方式：主光45°侧前上，环境光做氛围，背景保持2–3级更暗或虚化。
-	•	避免失真：家具/箱包尽量用Telephoto Lens；空间展示可用Wide view，谨慎Ultrawide shot。
+</div>
+
+<table>
+<tr>
+<th width="20%">📸 拍摄角度</th>
+<th width="30%">🎯 适用场景</th>
+<th width="50%">💡 专业建议</th>
+</tr>
+<tr>
+<td><strong>👤 全身 Full body</strong></td>
+<td>主图展示、整体造型</td>
+<td>适合展示完整穿搭效果，建议正面或45°角度</td>
+</tr>
+<tr>
+<td><strong>🖼️ 半身 Waist shot</strong></td>
+<td>主图、详情页</td>
+<td>突出上半身设计，适合展示领口、袖口细节</td>
+</tr>
+<tr>
+<td><strong>🎭 肖像 Portrait</strong></td>
+<td>面部特写、妆容展示</td>
+<td>配合美妆产品，突出面部细节</td>
+</tr>
+<tr>
+<td><strong>👥 侧身像 Profile</strong></td>
+<td>侧面轮廓、剪裁展示</td>
+<td>展示服装侧面线条和剪裁工艺</td>
+</tr>
+<tr>
+<td><strong>🔙 后视图 Back view</strong></td>
+<td>背面设计、细节展示</td>
+<td>展示背面设计元素、拉链、装饰等</td>
+</tr>
+<tr>
+<td><strong>👤 头部特写 Headshot</strong></td>
+<td>配饰、妆容展示</td>
+<td>突出帽子、耳环、项链等配饰细节</td>
+</tr>
+</table>
+
+**📝 服饰拍摄建议**：
+- **主图**：使用正面全身或半身
+- **详情页**：补充侧/背/细节（领口、面料、走线）
+- **户外生活方式**：低角度 Low angle 显比例更好，背景 Bokeh 突出服装层次
+
+**💬 示例Prompt（服饰）**：
+- **🇨🇳** 女款风衣，城市街景生活方式，低角度视图，半身，Bokeh，DSLR拍摄
+- **🇺🇸** Women's trench coat, urban lifestyle scene, low angle view, waist shot, bokeh, shot by DSLR
+
+---
+
+#### 💡 **快速布光与镜头小贴士**
+
+<div align="center">
+
+**🎬 专业摄影技术要点**
+
+</div>
+
+<table>
+<tr>
+<th width="25%">🎯 拍摄类型</th>
+<th width="40%">💡 布光方案</th>
+<th width="35%">📷 镜头选择</th>
+</tr>
+<tr>
+<td><strong>🖼️ 主图/三视图</strong></td>
+<td>双侧柔光 + 顶补光</td>
+<td>长焦或标准焦（避免超广角变形）</td>
+</tr>
+<tr>
+<td><strong>🔬 微距细节</strong></td>
+<td>小光圈（加景深）或焦点堆栈</td>
+<td>避免镜面高光炸点</td>
+</tr>
+<tr>
+<td><strong>🏠 生活方式</strong></td>
+<td>主光45°侧前上，环境光做氛围</td>
+<td>背景保持2–3级更暗或虚化</td>
+</tr>
+<tr>
+<td><strong>🪑 家具/箱包</strong></td>
+<td>避免失真</td>
+<td>尽量用Telephoto Lens；空间展示可用Wide view，谨慎Ultrawide shot</td>
+</tr>
+</table>
+
+**⚡ 快速检查清单**：
+- ✅ 主光角度是否合适（45°侧前上）
+- ✅ 背景是否虚化或保持暗调
+- ✅ 镜头是否避免变形
+- ✅ 高光是否控制在合理范围
 
 
 ---
